@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Archive</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oqb3vve.css">
+</head>
+<body>
+<header>
+    <h1 class ="title">Steel Reverie</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href= "videos.html">Videos</a></li>
+            <li><a href= "articles.html">Articles</a></li>
+            <li><a href= "private.html">Private</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container" id="passwordContainer">
+    <h1>Private Archive</h1>
+    <p>This page is restricted. Enter the password to access.</p>
+    <form id="passwordForm">
+        <input type="password" id="passwordInput" placeholder="Enter password" required>
+        <button type="submit">Submit</button>
+    </form>
+
+	<u><p class = "forgotp" id = "forgotp">forgot password?</p></u>
+
+    <div class="hintBox hidden" id="passwordHintBox">
+        <p>Hint: Look...</p>
+    </div>
+
+</div>
+
+<div id="secretContent" class="hidden">
+    <h2>Welcome to the Private Archive</h2>
+    <p>Here is some secret content</p>
+</div>
+
+<script>
+    const correctPassword = "steelreverie"; // Example password
+    const passwordForm = document.getElementById('passwordForm');
+    const passwordInput = document.getElementById('passwordInput');
+    const message = document.getElementById('message');
+    const passwordContainer = document.getElementById('passwordContainer');
+    const secretContent = document.getElementById('secretContent');
+
+    passwordForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if(passwordInput.value === correctPassword) {
+        passwordContainer.classList.add('hidden');
+        secretContent.classList.remove('hidden');
+      } else {
+        message.textContent = "Incorrect password. Keep searching...";
+        message.style.color = "#8B0000";
+      }
+    });
+
+    const forgotp = document.getElementById('forgotp');
+    const passwordHintBox = document.getElementById('passwordHintBox');
+
+    forgotp.addEventListener('click', function() {
+    passwordHintBox.classList.toggle('hidden');
+    });
+
+</script>
+</body>
+</html>

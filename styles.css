@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+body {
+  background-image: url('images/background.png');
+  background-color: #FF6600;
+  color: #000000;
+  font-family: "brush-up", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+nav ul {
+  list-style: none;       /* Remove bullets */
+  padding: 10;          
+  display: flex;          /* Make the list items align horizontally */
+  gap: 25px;              /* Space between items */
+}
+
+nav ul li a {
+  color: #396B99;
+  text-decoration: none;  /* Remove underline */
+  font-size: large;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.hidden {
+  display: none;
+}
+
+.band{
+	display:flex;
+	align-content: center;
+	padding: 10px;
+}
+
+.member{
+	padding:30px;
+}
+
+.profile{
+	border-radius: 50px;
+	align-content: flex-end;
+
+}
+
+.quote{
+    font-family: "brush-up-too", sans-serif;
+    font-weight: 500;
+    color: #B79C9A;
+    font-style: normal;
+	font-size: 30px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.title{
+    font-family: "brush-up-too", sans-serif;
+    font-weight: 500;
+    color: #B79C9A;
+    font-style: normal;
+	font-size: 90px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+}
+
+.forgotp{
+	color: #02646C;
+}
+
+.hint-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #FF6600; /* flame-colored border */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    width: 250px;
+    text-align: center;
+}
