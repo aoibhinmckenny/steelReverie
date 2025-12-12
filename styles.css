@@ -45,7 +45,7 @@ nav ul li a:hover {
 }
 
 .profile{
-    width: 150px;        /* fixed width */
+    width: 150px;
     height: 150px;
     object-fit: cover;
     border: 5px solid black;
