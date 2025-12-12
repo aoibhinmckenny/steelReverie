@@ -45,9 +45,12 @@ nav ul li a:hover {
 }
 
 .profile{
-	border-radius: 50px;
+    width: 150px;        /* fixed width */
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid black;
+	/*border-radius: 50px;*/
 	align-content: flex-end;
-
 }
 
 .quote{
