@@ -88,3 +88,25 @@ nav ul li a:hover {
     width: 250px;
     text-align: center;
 }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+ }
+
+ /* Corrupted effect */
+ .corrupted {
+     filter: grayscale(100%) contrast(600%) brightness(150%) blur(1px);
+     opacity: 0.5;
+ }
+
+

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="">
 <head>
 <meta charset="UTF-8">
 <title>The Lost Band Archive</title>
@@ -24,10 +24,21 @@
 	</header>
 	
 		<main>
-			<section>
-				<h2>Gallery</h2>
-				<img src="images/Thin_Lizzy_1970s.jpg" width="500" height="334" alt=""/>
-				<img src="Thin_Lizzy_1970.jpg" width="500" height="334" alt=""/>
+            <h2>Gallery</h2>
+			<section class ="gallery" >
+
+				<img src="images/bandPhoto.png" alt="bandPhoto"/>
+                <img  src="images/fullProfiles/Jack.png" alt="Jack"/>
+                <img src="images/missing.png" alt="Lost file"/>
+                <img  src="images/fullProfiles/Danny.png" alt="Danny"/>
+                <img  src="images/fullProfiles/Mick.png" alt="Mick"/>
+                <img src="images/missing.png" alt="cannot find image"/>
+                <img  src="images/fullProfiles/Lena.png" alt="Lena"/>
+                <img src="images/missing.png" alt="cannot find image"/>
+                <img  src="images/fullProfiles/Ricky.png" alt="Ricky"/>
+                <img src="images/missing.png" alt="cannot find image"/>
+                <img src="images/missing.png" alt="cannot find image"/>
+
 			</section>
 		</main>
 		
@@ -35,6 +46,21 @@
 	<footer>
   		<p>Last updated: October 20, 2005</p>
 	</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+       const images = document.querySelectorAll('.gallery img');
+
+       images.forEach(img => {
+           const rand = Math.random();
+
+           if (rand < 0.3) {
+               img.classList.add('corrupted');
+           } else if (rand < 0.5) {
+               img.src = 'images/missing.png';
+           }
+       });
+   });
+</script>
 	
 </body>
 </html>
