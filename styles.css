@@ -71,6 +71,12 @@ nav ul li a:hover {
     text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
 }
 
+.error-message {
+    margin-top: 10px;
+    color: #8B0000;
+    font-weight: bold;
+}
+
 .forgotp{
 	color: #02646C;
 	cursor: pointer;
@@ -110,5 +116,6 @@ nav ul li a:hover {
      filter: grayscale(100%) contrast(600%) brightness(150%) blur(1px);
      opacity: 0.5;
  }
+
 
 
